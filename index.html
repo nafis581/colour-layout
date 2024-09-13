@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Page Colored Rows</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .color-row {
+            display: flex;
+            width: 100%;
+            height: calc(100vh / 6); /* Divide screen height into 6 equal parts */
+        }
+
+        /* Individual rows colors */
+        .row-1 { background-color: red; }
+        .row-2 { background-color: brown; }
+        .row-2 .col-2 { background-color: cyan; }
+        .row-3 { background-color: blue; }
+        .row-3 .col-2 { background-color: purple; }
+        .row-3 .col-3 { background-color: lightgreen; }
+        .row-4 { background-color: pink; }
+        .row-4 .col-2 { background-color: lightblue; }
+        .row-4 .col-3 { background-color: beige; }
+        .row-4 .col-4 { background-color: lightpink; }
+        .row-5 { background-color: purple; }
+        .row-5 .col-2 { background-color: yellow; }
+        .row-5 .col-3 { background-color: teal; }
+        .row-5 .col-4 { background-color: green; }
+        .row-5 .col-5 { background-color: brown; }
+        .row-6 { background-color: black; }
+
+        /* Flex properties for dividing columns */
+        .color-row > div {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Row 1: Two full red sections -->
+    <div class="color-row row-1"></div>
+
+    <!-- Row 2: Split between brown and cyan -->
+    <div class="color-row row-2">
+        <div class="col-1"></div>
+        <div class="col-2"></div>
+    </div>
+
+    <!-- Row 3: Blue, purple, light green -->
+    <div class="color-row row-3">
+        <div class="col-1"></div>
+        <div class="col-2"></div>
+        <div class="col-3"></div>
+    </div>
+
+    <!-- Row 4: Pink, light blue, beige, light pink -->
+    <div class="color-row row-4">
+        <div class="col-1"></div>
+        <div class="col-2"></div>
+        <div class="col-3"></div>
+        <div class="col-4"></div>
+    </div>
+
+    <!-- Row 5: Purple, yellow, teal, green, brown -->
+    <div class="color-row row-5">
+        <div class="col-1"></div>
+        <div class="col-2"></div>
+        <div class="col-3"></div>
+        <div class="col-4"></div>
+        <div class="col-5"></div>
+    </div>
+
+    <!-- Row 6: Full black -->
+    <div class="color-row row-6"></div>
+
+</body>
+</html>
